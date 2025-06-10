@@ -10,9 +10,9 @@ load_dotenv()
 app = FastAPI()
 
 # Supabase config
-SUPABASE_URL = os.getenv("SUPABASE_URL")
+SUPABASE_URL = os.getenv("SUPER_BASE_URL")
 print("DEBUG - SUPABASE_KEY =", SUPABASE_URL)
-SUPABASE_KEY = os.getenv("SUPABASE_KEY")
+SUPABASE_KEY = os.getenv("SUPER_BASE_API_KEY")
 print("DEBUG - SUPABASE_KEY =", SUPABASE_KEY)
 STORAGE_BUCKET = os.getenv("STORAGE_BUCKET", "images")
 print("DEBUG - STORAGE_BUCKET =", STORAGE_BUCKET)
