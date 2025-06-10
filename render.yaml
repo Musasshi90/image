@@ -1,0 +1,14 @@
+services:
+  - type: web
+    name: image-upload-api
+    env: python
+    buildCommand: "pip install -r requirements.txt"
+    startCommand: "uvicorn main:app --host=0.0.0.0 --port=10000"
+    plan: free
+    envVars:
+      - key: SUPABASE_URL
+        value: https://ilxlucbirhxlhljhrswf.supabase.co
+      - key: SUPABASE_KEY
+        value: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImlseGx1Y2Jpcmh4bGhsamhyc3dmIiwicm9sZSI6InNlcnZpY2Vfcm9sZSIsImlhdCI6MTc0OTU2NzMxMSwiZXhwIjoyMDY1MTQzMzExfQ.osgMI19O4CxuHrJOSd4Wxfq-bKeZC7lj-mlLJ7qtYMc
+      - key: STORAGE_BUCKET
+        value: images

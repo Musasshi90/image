@@ -1,0 +1,5 @@
+supabase
+fastapi[all]
+python-multipart
+httpx
+uvicorn
