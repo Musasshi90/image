@@ -31,7 +31,6 @@ print(f'DEBUG STORAGE_BUCKET : {STORAGE_BUCKET}')
 USE_LOCAL_DB = os.getenv("USE_LOCAL_DB") == "True"
 print(f'DEBUG USE_LOCAL_DB : {USE_LOCAL_DB}')
 
-UPLOAD_DIR = None
+UPLOAD_DIR = Path("static/uploads")
 if USE_LOCAL_DB:
-    UPLOAD_DIR = Path("static/uploads")
     UPLOAD_DIR.mkdir(parents=True, exist_ok=True)

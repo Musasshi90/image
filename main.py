@@ -2,13 +2,15 @@ from fastapi import FastAPI
 from fastapi.staticfiles import StaticFiles
 import api.item_api as item_api
 import api.image_api as image_api
+import constant
 import database.item_database as item_database
 import database.image_database as image_database
 
 app = FastAPI()
 
 # Mount static files so uploaded images can be served
-app.mount("/static", StaticFiles(directory="static"), name="static")
+if constant.USE_LOCAL_DB:
+    app.mount("/static", StaticFiles(directory="static"), name="static")
 
 # Register routers
 app.include_router(image_api.router)
