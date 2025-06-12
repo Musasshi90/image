@@ -1,5 +1,8 @@
 supabase
 fastapi[all]
+python-dotenv
 python-multipart
 httpx
 uvicorn
+mysql-connector-python
+pydantic
